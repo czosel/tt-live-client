@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>TT-Ergebnisse</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+</head>
+<body>
+	<table></table>
+	<script src="index.js"></script>
+	<script>
+		var url =
+			"https://leipzig-stadt.tischtennislive.de/Export/default.aspx?LigaID=10322&Format=XML&SportArt=96&Area=Tabelle";
+
+		TTlive.clubTable("table", url);
+	</script>
+</body>
+</html>
