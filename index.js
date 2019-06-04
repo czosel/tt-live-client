@@ -37,7 +37,8 @@ function parse(xml) {
   const teams = [...xml.firstChild.querySelector("Content").children];
   return teams.map(team => {
     return sourceColumns.reduce((res, col) => {
-      return { [col]: team.querySelector(col).innerHTML, ...res };
+      const node = team.querySelector(col);
+      return { [col]: node ? node.innerHTML : "", ...res };
     }, {});
   });
 }

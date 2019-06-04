@@ -4,12 +4,12 @@
 </head>
 <body>
 	<table></table>
-	<script src="index.js"></script>
+	<script src="dist/bundle.js"></script>
 	<script>
 		var url =
-			"https://leipzig-stadt.tischtennislive.de/Export/default.aspx?LigaID=10322&Format=XML&SportArt=96&Area=Tabelle";
+			"https://leipzig.tischtennislive.de/Export/default.aspx?LigaID=10155&Format=XML&SportArt=96&Area=Tabelle";
 
-		TTlive.clubTable("table", url);
+		TTlive.leagueTable(url, "table");
 	</script>
 </body>
 </html>
