@@ -70,7 +70,7 @@ function renderHead() {
   return `<tr>${renderedCols}</tr>`;
 }
 
-export function clubTable(selector, url) {
+export function leagueTable(selector, url) {
   fetch(url)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
