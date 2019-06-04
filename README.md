@@ -21,7 +21,7 @@ Renders a league's table ("Ergebnistabelle") to a given DOM node.
 
 ```js
 // Example
-TTlive.leagueTable(url, selector);
+TTlive.leagueTable("https://leipzig.tischtennislive.de/Export/default.aspx?LigaID=10155&Format=XML&SportArt=96&Area=Tabelle", "#my-table");
 ```
 
 
