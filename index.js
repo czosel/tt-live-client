@@ -9,10 +9,10 @@ const sourceColumns = [
   "Niederlagen",
   "SpielePlus",
   "SpieleMinus",
-  "SpieleDif",
+  // "SpieleDif",
   "PunktePlus",
-  "PunkteMinus",
-  "PunkteDif"
+  "PunkteMinus"
+  // "PunkteDif"
 ];
 const displayColumns = [
   { value: "Platz" },
@@ -21,16 +21,19 @@ const displayColumns = [
   { label: "S", value: "Siege" },
   { label: "U", value: "Unentschieden" },
   { label: "N", value: "Niederlagen" },
-  {
+  /*
+	{
     label: "Spiele",
     value: row => `${row["SpielePlus"]}:${row["SpieleMinus"]}`
-  },
-  { label: "+/-", value: "SpieleDif" },
+	},
+	{ label: "+/-", value: "SpieleDif" },
+	*/
   {
     label: "Punkte",
-    value: row => `${row["PunktePlus"]}:${row["PunkteMinus"]}`
-  },
-  { label: "+/-", value: "PunkteDif" }
+    value: row =>
+      row["PunktePlus"] ? `${row["PunktePlus"]}:${row["PunkteMinus"]}` : "-"
+  }
+  //{ label: "+/-", value: "PunkteDif" }
 ];
 
 function parse(xml) {
